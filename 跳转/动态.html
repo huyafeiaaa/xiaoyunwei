@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="tuijian_top">
+			<div style="color:#F75A70;">
+				<p>孕妇讨论:</p>
+				<p class="glyphicon glyphicon-remove"></p>
+			</div>
+		</div>
+		<div class="dongtai_top">
+			<div class="dongtai_top_a">
+				<img src="./img/社区动态1.png"/>
+				<div>
+					<p>李鹏星【怀孕三个月】</p>
+					<p style="color: darkgray;font-size: 0.22rem;">如何调理身体</p>
+				</div>
+			</div>
+			<div style="background:#F75A70;color: white;width: 50px;height: 30px;line-height: 30px;border-radius: 10%;text-align: center;">已关注</div>
+		</div>
+				<div class="dongtai_top">
+			<div class="dongtai_top_a">
+				<img src="./img/社区动态2.png"/>
+				<div>
+					<p>爱笑的女生运气不会差</p>
+					<p style="color: darkgray;font-size: 0.22rem;">09-24</p>
+				</div>
+			</div>
+			<div class="glyphicon glyphicon-chevron-down" onclick="ff()"></div>
+		</div>
+		<div class="dongtai_center">
+			{{dongtai_center.dongtai_center[0]}}
+			<ul class="dongtai_ul">
+				<li ng-repeat="x in dongtai_ul">
+					<img src="{{x.img}}"/>
+				</li>
+			</ul>
+			<div class="dongtai_main">
+				<div>圈子：孕妇讨论社区</div>
+				<div>
+					<img src="./img/社区动态3.png"/>
+					<p>95</p>
+					<img src="./img/社区动态4.png"/>
+					<p>200</p>
+				</div>
+			</div>
+		</div>
+				<div class="dongtai_top">
+			<div class="dongtai_top_a">
+				<img src="./img/社区动态2.png"/>
+				<div>
+					<p>好好生活</p>
+					<p style="color: darkgray;font-size: 0.22rem;">08-29</p>
+				</div>
+			</div>
+			<div class="glyphicon glyphicon-chevron-down"></div>
+		</div>
+		<div class="dongtai_center">
+			{{dongtai_center.dongtai_center[1]}}
+			<ul class="dongtai_ul">
+				<li ng-repeat="x in dongtai_ul">
+					<img src="{{x.img}}"/>
+				</li>
+			</ul>
+			<div class="dongtai_main">
+				<div>圈子：孕妇讨论社区</div>
+				<div>
+					<img src="./img/社区动态3.png"/>
+					<p>95</p>
+					<img src="./img/社区动态4.png"/>
+					<p>200</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function ff(){
+		$(".dongtai_center").toggle();
+	}
+
+</script>

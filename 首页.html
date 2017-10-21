@@ -1,0 +1,62 @@
+
+
+
+<div class="nav_a navbar-fixed-top">
+<form class="form-inline">
+			  <div class="form-group has-success has-feedback"> 
+			  	<span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+			    <input type="text" class="form-control" id="inputSuccess4" aria-describedby="inputSuccess4Status"placeholder=" 搜索今日最新推荐">
+			  </div>
+			</form>
+		</div>
+	
+
+
+
+<!--轮播1-->
+<div class="swiper-container swiper1">
+	<div class="swiper-wrapper">
+		<div ng-repeat="x in arr"class="swiper-slide">
+			<img src="{{x.img}}" width="100%" />
+		</div>
+	</div>
+	<div class="swiper-pagination"></div>
+</div>
+<!--小点击-->
+<ul class="sy_ul1">
+	<li ng-repeat="x in obj" ng-click="go($index)">
+		<a ui-sref=".shou">
+			<img src="{{x.img}}"/>
+			<p>{{x.text}}</p>
+		</a>
+	</li>
+</ul>
+<hr style="border:7px solid lightgray;" />
+<!--下面的字-->
+<div class="sy_center_a">—— 热门菜谱&nbsp;BEST ——</div>	
+<div class="sy_center_b">
+	<div style="border-bottom: 1px solid;">
+		<div><img src="{{center.shouye_center[0]}}" class="sy_img"/></div>
+		<div  class="sy_center_c">
+		<p style="font-size: 0.3rem; color: gray;">{{center.shouye_center[1]}}</p>	
+		<p>{{center.shouye_center[2]}}</p>
+		</div>
+	</div>
+	<div>
+		<div><img src="{{center.shouye_center[3]}}"class="sy_img"/></div>
+		<div   class="sy_center_c">
+		<p style="font-size: 0.3rem; color: gray;">{{center.shouye_center[4]}}</p>	
+		<p>{{center.shouye_center[5]}}</p>
+		</div>
+	</div>
+</div>
+<hr style="border:7px solid lightgray;" />
+<!--下面的字-->
+<div class="sy_center_a">—— 为您优选&nbsp;BEST ——</div>
+
+<!--最后图片-->
+	<ul class="sy_ul_footer">
+		<li><img src="img/首页_37.gif"/></li>
+		<li><img src="img/首页_42.gif"/></li>
+		<li><img src="img/首页_40.gif"/></li>
+	</ul>

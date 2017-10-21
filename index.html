@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chome=1" />
+		<!--视口--设备宽度--初始缩放比例--最小缩放比例--最大缩放比例--用户缩放-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--禁止浏览器自动的识别-电话号码-email--->
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<!--是否启用Web全屏-->
+		<meta name="apple-mobile-web-app-capable" content='yes' />
+		<link rel="stylesheet" type="text/css" href="new_file.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="swiper 轮播插件/css/swiper.min.css" />
+		<script type="text/javascript" src="bootstrap/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="swiper 轮播插件/js/swiper.min.js"></script>
+		<script type="text/javascript" src="rem等比例缩放插件/app.js"></script>
+		<script type="text/javascript" src="angular-1.4.6.min.js"></script>
+		<script type="text/javascript" src="angular-ui-router.js"></script>
+		<script type="text/javascript" src="iscroll-probe.js"></script>
+		<title></title>
+	</head>
+
+	<body ng-app="app" ng-controller="aaa">
+		<div class="navbar-fixed-top"><img src="img/社区，关注_01.png" width="100%" /></div>
+		<div id="wrapper">
+			<div>
+				<div class="top">下拉刷新</div>
+				<ui-view></ui-view>
+				<ul class="ul_b">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+					<li>11</li>
+					<li>12</li>
+					<li>13</li>
+					<li>14</li>
+					<li>15</li>
+					<li>16</li>
+					<li>17</li>
+					<li>18</li>
+					<li>19</li>
+					<li>20</li>
+					<li>21</li>
+				</ul>
+
+			</div>
+		</div>
+		<ul class="ul_a  navbar navbar-default navbar-fixed-bottom">
+			<li>
+				<a ui-sref="1" style="color: gray;">
+					<img src="img/首页_48.gif" width="60%" />
+					<p>首页</p>
+				</a>
+			</li>
+			<li>
+				<a ui-sref="2" style="color: gray;">
+					<img src="img/首页_50.gif" width="60%" />
+					<p>发现</p>
+				</a>
+			</li>
+			<li>
+				<a ui-sref="3" style="color: gray;">
+					<img src="img/首页_52.gif" width="60%" />
+					<p>视频</p>
+				</a>
+			</li>
+			<li>
+				<a ui-sref="4" style="color: gray;">
+					<img src="img/首页_54.gif" width="60%" />
+					<p>社区</p>
+				</a>
+			</li>
+			<li>
+				<a ui-sref="5" style="color: gray;">
+					<img src="img/首页_56.gif" width="60%" />
+					<p>我的</p>
+				</a>
+			</li>
+		</ul>
+
+	</body>
+	<script>
+		var app = angular.module("app", ['ui.router']);
+		app.controller("aaa", function($scope, $http, $timeout) {
+			$http({
+				method: "get",
+				url: "http://localhost:8080/data1"
+			}).then(function(data) {
+				//				console.log(data.data)
+				$timeout(function() {
+					var swiper = new Swiper(".swiper1", {
+						autoplay: "200",
+						loop: "true",
+						pagination: ".swiper-pagination",
+						paginationClickable: true
+					})
+				}, 200)
+				$scope.arr = data.data.swiper;
+				$scope.obj = data.data.shouye_ul;
+				$scope.center = data.data;
+				$scope.go = function(a) {
+					$scope.arr1 = ["跳转/mei.html", "跳转/shui.html", "跳转/gan.html"],
+						location.href = $scope.arr1[a]
+				}
+
+			})
+		})
+		app.controller("bbb", function($scope, $http, $timeout) {
+			$http({
+				method: "get",
+				url: "http://localhost:8080/data1"
+			}).then(function(data) {
+				//						console.log(data)
+				$scope.xzs = data.data;
+				$scope.yun = data.data;
+				$scope.chan = data.data;
+			})
+		})
+		app.controller("ccc", function($scope, $http, $timeout) {
+			$http({
+				method: "get",
+				url: "http://localhost:8080/data1"
+			}).then(function(data) {
+				$scope.sp = data.data.sp;
+			})
+		})
+		app.controller("ddd", function($scope, $http, $timeout) {
+			$http({
+				method: "get",
+				url: "http://localhost:8080/data1"
+			}).then(function(data) {
+				$scope.guanzhu = data.data.guanzhu;
+				$scope.tuijain = data.data.tuijian;
+				$scope.tuijain_ul_a = data.data.tuijian_ul_a;
+				$scope.tuijain_ul_b = data.data.tuijian_ul_b;
+				$scope.dongtai_center=data.data;
+				$scope.dongtai_ul=data.data.dongtai_ul;
+			})
+		})
+				app.controller("eee", function($scope, $http, $timeout) {
+			$http({
+				method: "get",
+				url: "http://localhost:8080/data1"
+			}).then(function(data) {
+					$scope.wd_ul=data.data.wd_ul
+			})
+		})
+		app.config(function($stateProvider, $urlRouterProvider) {
+			$urlRouterProvider.otherwise("1");
+			$urlRouterProvider.otherwise("/2/xiao");
+			$urlRouterProvider.when("/2", "2/xiao");
+			$urlRouterProvider.otherwise("/4/guan");
+			$urlRouterProvider.when("/4", "4/guan");
+			$stateProvider.state("1", {
+					url: "/1",
+					templateUrl: "首页.html",
+					controller: "aaa"
+				}).state("2", {
+					url: "/2",
+					templateUrl: "发现.html",
+					controller: "bbb"
+				}).state("2.xiao", {
+					url: "/xiao",
+					templateUrl: "跳转/小知识.html"
+				}).state("2.yun", {
+					url: "/yun",
+					templateUrl: "跳转/孕前调理.html"
+				}).state("2.chan", {
+					url: "/chan",
+					templateUrl: "跳转/产后注意.html"
+				}).state("3", {
+					url: "/3",
+					templateUrl: "视频.html",
+					controller: "ccc"
+				}).state("4", {
+					url: "/4",
+					templateUrl: "社区.html",
+					controller: "ddd"
+				}).state("4.guan", {
+					url: "/guan",
+					templateUrl: "跳转/关注.html"
+				}).state("4.tui", {
+					url: "/tui",
+					templateUrl: "跳转/推荐.html"
+				})
+				.state("4.dong", {
+					url: "/dong",
+					templateUrl: "跳转/动态.html"
+				})
+				.state("5", {
+					url: "/5",
+					templateUrl: "我的.html",
+					controller: "eee"
+				})
+		})
+
+		//		//
+		document.addEventListener("touchmove", function(ev) {
+			ev.preventDefault();
+		}, {
+			passive: false
+		})
+		var scroll = new IScroll("#wrapper", {
+			probeType: 3
+		})
+		scroll.on("scroll", function() {
+
+			console.log(scroll.startY)
+			//        console.log(123)
+			//        滚动条距离20
+			if(scroll.startY > 20) {
+				//            下拉显示
+				$(".top").show();
+			}
+			if(scroll.maxScrollY - scroll.startY > 20) {
+				$(".bottom").show();
+			}
+		})
+		//    没有添加
+		//    console.log(scroll.maxScrollY)
+		scroll.on("scrollEnd", function() {
+			if(scroll.startY > 20) {
+				//            改变内容
+				$(".top").html("正在加载...");
+				setTimeout(function() {
+					$(".top").hide();
+					$(".top").html("下拉刷新");
+					//            刷新
+					scroll.refresh();
+
+				}, 1000)
+
+			}
+
+			//
+		})
+		
+		
+		
+	</script>
+
+</html>

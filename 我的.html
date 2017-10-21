@@ -1,0 +1,63 @@
+<div class="wd">
+	<div class="wd_top">
+		<img src="img/我的2.png" width="10%"height="10%"/>
+		<p>我的</p>
+		<img src="img/我的3.png"width="10%"height="10%"/>
+	</div>
+	<div class="wd_top_a">
+		<div>
+			<img src="img/我的4.png" class="wd_img"/>
+		</div>
+		<div style="opacity: 0.5;">
+			<p>遇见美丽的你</p>
+			<p style="font-size: 0.25rem;">请设置常居地</p>
+		</div>
+	</div>
+	<ul class="wd_ul_a">
+		<li>
+			<p>0</p>
+			<p>菜谱</p>
+		</li>
+		<li>
+			<p>0</p>
+			<p>点评</p>
+		</li>
+		<li>
+			<p>0</p>
+			<p>收藏</p>
+		</li>
+		<li>
+			<p>0</p>
+			<p>好友</p>
+		</li>
+	</ul>
+</div>
+<ul class="wd_ul_b">
+	<li>
+		<img src="img/我的5.png"/>
+		<p>预约</p>
+	</li>
+		<li>
+		<img src="img/我的6.png"/>
+		<p>钱包</p>
+	</li>
+		<li>
+		<img src="img/我的7.png"/>
+		<p>订单</p>
+	</li>
+		<li>
+		<img src="img/我的8.png"/>
+		<p>购物车</p>
+	</li>
+</ul>
+<ul class="wd_ul_c">
+	<li ng-repeat="x in wd_ul">
+		<div>
+			<img src="{{x.img}}"/>
+			<p>{{x.tex}}</p>
+		</div>
+		<div>
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</div>
+	</li>
+</ul>

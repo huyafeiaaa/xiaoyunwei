@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul class="guan_ul"> 
+			<li ng-repeat="x in guanzhu">
+				<img src="{{x.img}}"width="100%"/>
+			<div>
+				<div><img src="{{x.img1}}" width="70%"/></div>
+			<div>20000<span class="glyphicon glyphicon-heart" onclick="fun(this)"></span></div>
+			</div>
+			</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+	function fun(a){
+		a.style.background="red"
+	}
+</script>
+</html>

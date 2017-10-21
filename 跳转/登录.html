@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge,chome=1" />
+		<!--视口--设备宽度--初始缩放比例--最小缩放比例--最大缩放比例--用户缩放-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--禁止浏览器自动的识别-电话号码-email--->
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<!--是否启用Web全屏-->
+		<meta name="apple-mobile-web-app-capable" content='yes' />
+		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css" />
+		<script type="text/javascript" src="../bootstrap/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			body {
+				background: url(../img/6.注册.png);
+				background-size: 100%;
+			}
+			.form-inline{margin-top: 50px;margin: auto;}
+			.input-group-addon,.form-control{background: rgba(172,147,143,0.1);color: white;}
+			.input-group{
+				width: 70%;
+				margin:0 auto;
+			}
+			input::-ms-input-placeholder{color: white;}
+			.form1{margin-top:100px ;}
+			.input-group>span{color: white;}
+			.input1{width:70%;}
+			.footer{width: 100%;padding: 50px;box-sizing: border-box;font-size: 18px;display: flex;justify-content: space-between;}
+			#btn1{width: 80%;margin: 50px;box-sizing: border-box;}
+		</style>
+	</head>
+	<body>
+			<div><img src="../img/社区，关注_01.png" width="100%" /></div>
+		<p style="color: white;font-size: 40px;text-align: center;">登录</p>
+		<form class="form-inline form1">
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+				<div class="input-group">
+					<div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+					<input type="text" class="form-control" id="exampleInputAmount" placeholder="请输入您的账号">
+
+				</div>
+			</div>
+
+		</form>
+		<form class="form-inline">
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+				<div class="input-group">
+					<div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+					<input type="text" class="form-control" id="exampleInputAmount" placeholder="请输入您的密码">
+
+				</div>
+			</div>
+
+		</form>
+	<button type="button" class="btn btn-primary btn-lg btn-block " id="btn1" style="background:#FF5D74;">快速登录</button>
+	<div style="color: white;"class="footer">
+	<p>忘记密码？</p>
+	<p>新用户注册</p>
+</div>
+
+	</body>
+	<script type="text/javascript">
+		//获取
+		var put = document.querySelectorAll("input");
+		var btn = document.querySelector("button");
+
+
+		btn.onclick = function() {
+			var arr = JSON.parse(localStorage.getItem("text"));
+			//遍历数组
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i].tel == put[0].value && arr[i].password == put[1].value) {
+				  localStorage.setItem("text",JSON.stringify(arr));
+           location.href="../首页.html";
+
+
+				} else {
+					alert("登录失败'")
+				}
+			}
+		}
+	</script>
+</html>

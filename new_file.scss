@@ -1,0 +1,364 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";text-decoration: none;}
+html{font-size: 62.5%;}
+.ul_a{width: 100%;display: flex;justify-content: space-around;text-align: center;color: darkgray;}
+//首页
+.nav_a{
+    width: 100%;
+    margin-top: 8%;
+    form{
+        width: 50%;
+        margin:0 auto;
+        input{
+            border-radius:20px ;
+            height: 0.5rem;
+            margin-top: 10px;
+            background: rgba(172,147,143,0.1);
+            color: lightgray;
+            
+        }
+        .glyphicon{
+            left: -7px;
+        }
+    }
+}
+.sy_ul1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    color: gray;
+    img{
+        width: 80%;
+        height: 60%;
+    }
+    li{
+        width: 20%;
+        text-align: center;
+        align-items: center;
+        padding-top: 3%;
+        box-sizing: border-box;
+    }
+}
+.sy_center_a{
+    width: 100%;
+    text-align: center;
+    font-size: 0.3rem;
+}
+.sy_center_b{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.sy_center_b>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    box-sizing: border-box;
+}
+.sy_center_c{
+    color: darkgray;
+    font-size: 0.23rem;
+}
+.sy_ul_footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  li{
+      width: 33%;
+      text-align: center;
+      img{
+          width: 95%;
+      }
+  }
+}
+    .sy_img{
+        width: 100%;
+        transition: 1s;
+        position: relative;
+        transform-origin: center center 50px;
+        transform-style: preserve-3d;
+        animation: run 5s linear infinite;
+    }
+    @keyframes run{
+        from{transform: scale(1)}
+        to{transform: scale(1.1)}
+    }
+//首页下的每个小页面
+.meishi{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    li{
+        width: 48%;
+        img{
+            width: 90%;
+        }
+    }
+}
+//发现
+.fx_top{
+    width: 100%;
+    text-align: center;
+    padding: 3%;
+    box-sizing: border-box;
+    font-size: 0.3rem;
+    border-bottom: 1px solid lightgray;
+}
+.fx_top_a{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    li{
+        width: 33%;
+        text-align: center;
+    }
+}
+.fx_top_a li:hover{border-bottom: 1px solid red;}
+//发现下的小知识
+.xzs_top{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+    box-sizing: border-box;
+    border-bottom: 5px solid darkgray;
+    }
+    .xzs_max{
+        width: 100%;
+          padding: 3%;
+        box-sizing: border-box; 
+        font-size: 0.24rem;
+        .xzs_center{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: darkgray;   
+        } 
+    }
+//发现下的孕前调理
+.yun_center{width: 100%;display: flex;justify-content: space-around;align-items: center;font-size: 0.24rem;color: darkgray;padding: 3%;box-sizing: border-box;}
+//发现下的产后注意
+.chan{width: 100%;padding: 2%;box-sizing: border-box;}
+//视频
+.sp_top{width: 100%;display: flex;justify-content: space-around;margin-top: 30px;font-size: 0.4rem;align-items: center;}
+.sp_ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: darkgray;
+    padding: 2%;
+    box-sizing: border-box;
+    font-size: 0.25rem;
+    li{
+        width: 48%;
+        
+        img{
+            width: 90%;
+        }
+    }
+    .sp_li_a{
+        width: 93%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.2rem;
+    }
+}
+//社区里的关注
+.guan_ul{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    li{
+        width: 48%;
+
+        div{display: flex;justify-content: space-between;align-items: flex-end;margin-top: -10px;}
+    }
+}
+//社区里的推荐
+.tuijian_top{
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    font-size: 0.3rem;
+    color: gray;
+    border-bottom: 1px solid darkgray;
+}
+.tuijian_ul{
+    width: 100%;
+    display: flex;
+    padding: 3%;
+    box-sizing: border-box;
+    justify-content: space-around;
+    text-align: center;
+    img{
+        width: 90%;
+    }
+}
+.tuijian_a{display: flex;justify-content: space-between;width: 35%;align-items: center;}
+.tuijian_top>div{
+        width: 100%;
+       display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+//社区里的动态
+.dongtai_top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.dongtai_top_a{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    font-size: 0.25rem;
+    img{
+        width: 30%;
+    }
+}
+.dongtai_center{
+    width: 100%;
+    padding-top: 2%;
+    padding-left: 20%;
+    box-sizing: border-box;
+    font-size: 0.25rem;
+    color: gray;
+    .dongtai_ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        img{
+            width: 90%;
+            height: 100%;
+        }
+    }
+}
+.dongtai_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color:gray;
+    div{
+          display: flex;
+          align-items: center;
+          img{width: 50%;height: 50%;}  
+    }
+}
+//我的
+.wd{
+    width: 100%;
+    height:250px;
+    background: url(img/我的1.png);
+    background-size: 100%;
+    position: relative;
+
+}
+
+.wd_top{width: 100%;display: flex;justify-content: space-around;position: absolute;top:30px;font-size:0.3rem;color: white;}
+.wd_img{border-radius: 50%;width: 80px;height: 80px;}
+.wd_top_a{
+    width: 100%;
+    display: flex;
+    div{
+        margin-top:70px;
+        margin-left: 25px;
+        color: white;
+        font-size: 0.3rem;
+        align-items: center;
+    }
+}
+.wd_ul_a{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    opacity: 0.6;
+    color: white;
+    margin-top: 35px;
+    li{
+        width: 25%;
+        text-align: center;
+        border-right: 1px solid white;
+    }
+}
+.wd_ul_b{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    
+    li{
+        width: 25%;
+        text-align: center;
+        img{
+            width: 50%;
+        }
+    }
+}
+.wd_ul_c{
+    width: 100%;
+    flex-wrap: wrap;
+    li{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2%;
+        box-sizing: border-box; 
+        border-bottom: 1px solid darkgray;
+    }
+}
+.wd_ul_c>li div:nth-of-type(1){
+    display: flex;
+    align-items: center;
+}
+//下拉
+        header,footer{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #ccc;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        #wrapper{
+            flex-grow: 1;
+            height: 0px;
+            overflow: hidden;
+        }
+        .ul_b{
+            margin-top: 600px;
+        }
+       .ul_b>li{
+            height: 80px;
+            line-height: 80px;
+            border:1px solid;
+            text-align: center;
+    
+        }
+        .top,.bottom{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            display: none;
+        }
